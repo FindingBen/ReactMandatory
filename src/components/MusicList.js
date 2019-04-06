@@ -6,11 +6,10 @@ const MusicList = props => {
   const songs = props
     .songs
     .filter(song => {
-      return (song.name + song.band)
-        
+      return (song.name + song.band)      
     })
     .map(song => {
-      return <MusicItem key={song.name} theSong={song} />;
+      return <MusicItem key={song.id} theSong={song} />;
     });
 
   return(
